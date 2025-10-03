@@ -2,17 +2,25 @@ Q-Learning in a 3D Gridworld
 
 Tabular Q-learning on a stochastic 3D Gridworld with slip dynamics, step cost, and absorbing terminals. Includes a clean Python package, training/evaluation scripts, experiment sweeps, inline visualizations (value heatmaps + policy arrows), and a Colab/Jupyter notebook version.
 
+_________________________________________________________________________________________________________
+
 Features
 
 Environment: 3D Gridworld (default 6×6×6), six actions (±x, ±y, ±z), stochastic slip: intended move with prob p, otherwise uniform among four perpendicular moves. Blocked moves → stay put. Absorbing terminals (goal +50, pit −50).
 
+
 Agent: Tabular Q-learning with ε-greedy exploration and tie-breaks handled stochastically.
+
 
 Experiments: One-factor sweeps over discount γ, slip probability p, and step cost; learning curves, greedy vs random evaluation, and value/policy visualizations for ≥3 z-slices.
 
+
 Reproducibility: Fixed RNG seeds for obstacle placement and agent behavior.
 
-Notebook: Self-contained .ipynb in experiments/ for Colab/Jupyter.
+
+Notebook: Self-contained .ipynb version in experiments/ for Colab/Jupyter.(for bypassing the .py version)
+
+_________________________________________________________________________________________________________
 
 Repo Structure
 3D-GridWorld-RL-Project/
@@ -44,6 +52,8 @@ Repo Structure
 
 
 Make sure __init__.py exists (can be empty) in src/, scripts/, and tests/ so module imports work when running with python -m.
+
+
 
 Getting Started
 Prerequisites
@@ -104,6 +114,7 @@ A single-file, self-contained notebook is provided at:
 
 experiments/3d_gridworld_qlearning.ipynb
 
+_________________________________________________________________________________________________________
 
 How to run (Colab):
 
@@ -143,11 +154,13 @@ Greedy policy average return ≫ random baseline (random often ~ −200 to −30
 
 Heatmaps show bright corridors toward the goal; obstacles appear as gaps; arrows (xy) bend around obstacles; z± actions are shown without arrows (zero xy displacement).
 
+
 Reproducibility
 
 Obstacle placement and agent randomness use fixed seeds (GridSpec.seed, QConfig.seed).
 
 Terminals are absorbing: if you are on a terminal and call step, you immediately receive ±50 and done=True. Entering a terminal also terminates.
+
 
 Troubleshooting
 
@@ -160,20 +173,22 @@ In QConfig, eps_schedule must use field(default_factory=EpsilonSchedule).
 Matplotlib backend issues (some Windows setups):
 Add plt.switch_backend("Agg") at the top of plotting scripts to save files without showing windows.
 
+_________________________________________________________________________________________________________
+
 Citing & Related Work
 
 If you include a related-work section in your report, a concise, relevant citation is:
 
 Ergon Cugler de Moraes Silva, “From Two-Dimensional to Three-Dimensional Environment with Q-Learning: Modeling Autonomous Navigation with Reinforcement Learning and no Libraries,” arXiv:2403.18219 (2024).
 
-(Plus any course notes or textbooks you referenced.)
+_________________________________________________________________________________________________________
 
 License
 
 Add your preferred license (e.g., MIT) in LICENSE and mention it here. If unsure, MIT is common for course projects.
 
+_________________________________________________________________________________________________________
+
 Acknowledgments
 
 Thanks to teammates/instructors for feedback, and to open-source contributors for NumPy/Matplotlib.
-
-Happy experimenting! If you want, I can also add a tiny make_submission_zip.py script that packs your code + selected results + report into a single archive for upload.
