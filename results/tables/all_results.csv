@@ -1,0 +1,8 @@
+tag,episodes,alpha,gamma,p_intended,step_cost,obstacle_ratio,avg_return_last100,greedy_avg,random_avg,train_seconds,curve_path
+gamma_0.90,5000,0.2,0.9,0.8,-1.0,0.12,30.65,31.94,-270.93,3.8156824111938477,results\learning_curves\gamma_0.90_20251003_122953.png
+gamma_0.95,5000,0.2,0.95,0.8,-1.0,0.12,31.29,32.07,-270.87,4.003442287445068,results\learning_curves\gamma_0.95_20251003_122959.png
+gamma_0.99,5000,0.2,0.99,0.8,-1.0,0.12,30.9,31.58,-257.41,5.4513514041900635,results\learning_curves\gamma_0.99_20251003_123005.png
+p_0.60,5000,0.2,0.95,0.6,-1.0,0.12,23.41,24.62,-236.04,16.73315954208374,results\learning_curves\p_0.60_20251003_123025.png
+p_0.80,5000,0.2,0.95,0.8,-1.0,0.12,31.29,32.07,-270.87,7.985199213027954,results\learning_curves\p_0.80_20251003_123035.png
+step_m1.00,5000,0.2,0.95,0.8,-1.0,0.12,31.29,32.07,-270.87,3.9477505683898926,results\learning_curves\step_m1.00_20251003_123041.png
+step_m0.50,5000,0.2,0.95,0.8,-0.5,0.12,40.74,41.025,-152.195,4.162604093551636,results\learning_curves\step_m0.50_20251003_123046.png
